@@ -1,18 +1,18 @@
-# jaafar akram saleh
+# **jaafar akram saleh**
  ## Contact :
 **Mobile** : +96171415520 
 #### **E-mail**: jaffarsaleh90@gmail.com
 
-#  Address:
+## Address:
 **Beirut-Salim Slam**
 
 # Personal Information :
 
-#### Date of Birth : 21/09/1990
-#### Place of Birth : Lattakia - Syria
+#### *Date of Birth : 21/09/1990*
+#### *Place of Birth* : Lattakia - Syria
 
 # Education :
- #### B.S Pure Chemistry , syria / latakia / Tishreen university 
+ #### **B.S Pure Chemistry** , syria / latakia / Tishreen university 
 
 
 # Skills:
@@ -36,3 +36,4 @@ To secure a position with a stable and profitable organization, where I can be a
 -   Arabic  : Native 
 -   English : Intermediate 
 -   Swedish : Basic
+![text](16068-web-developer-wallpaper_3468.jpg)
