@@ -1,0 +1,50 @@
+body{
+    background-color:gray;
+}
+.thehead{
+    color: brown;
+    background-image: url(https://www.shutterbug.com/images/styles/600_wide/public/Selfie-Cat.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+    margin: 50px;
+    text-align: center;
+}
+.menu{
+    background-color: blueviolet;
+    padding: 25px;
+    margin: 30px;
+}
+.menu a{
+    padding:0 60px;
+
+}
+.secmenue ul{
+    font-size: 20px;
+    text-decoration: underline overline;
+}
+#blochd{
+    width: 300px;
+   
+}
+.seconddev{
+    color:green;
+    text-align: center;
+    top: 50px;
+    position: absolute;
+    top: 400px;
+    right: 500px;
+    width: 300px;
+    
+}
+.forthdev{
+    width: 200px;
+    position: absolute;
+   top:17px;
+   left:500px;
+  
+}
+.sixdev{
+    color:red;
+}
