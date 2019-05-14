@@ -19,17 +19,24 @@ body{
 .menu a{
     padding:0 60px;
 
+
 }
 .secmenue ul{
     font-size: 20px;
     text-decoration: underline overline;
+    margin:20px;
+    padding: 20px;
+}
+.secmenue li{
+    padding: 3px;
+    margin:2px;
 }
 #blochd{
     width: 300px;
    
 }
 .seconddev{
-    color:green;
+    color: rgb(134, 0, 71);
     text-align: center;
     top: 50px;
     position: absolute;
