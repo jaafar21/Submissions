@@ -1,0 +1,194 @@
+
+#\#wrapper {
+  width:90%;
+    margin:  auto;
+    position: relative;
+  }
+  header{
+      background-color: gray;
+      padding: 20px;
+
+  }
+  hgroup {
+    float: left;
+    color: red;
+    width: 30%;
+    margin:15px;
+  }
+  figure img {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+.content{
+    display: grid;
+    grid-template-columns: br br;
+    grid-template-rows: br br br;
+    grid-template-areas:
+    "about competence"
+    "experiences education"
+    "hobbies hobbies"
+}
+h3:before{
+    content: ".";
+    color:red;
+    font-size: 90px;
+    
+}
+#contact h3:before{
+    content: "";
+    
+}
+#competencies{
+    position: relative;
+}
+
+ .skills-primary::before{
+    content: "Main";
+
+}
+.skills-secondary::before{
+    content: "Other";
+   
+}
+#contact {
+    position: absolute;
+    top:-125px;
+    right: 0;
+
+  }
+  
+  
+  
+  #contact h3 {
+    
+    visibility:hidden;
+  }
+  .contacts {
+    width:610px;
+    
+    background-color:black;
+  }
+  .contact {
+    display: flex;
+  }
+  
+  .contact-type {
+    width: 140px;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 0px;
+  
+
+  }
+  
+  .contact-value {
+    padding: 2px 8px;
+    background-color: #000;
+    color: #ff0000;
+  }
+  
+  .contact-value a {
+    color: red;
+  }
+  
+  
+  
+h3{
+    border-bottom: 1px solid gray;
+}
+p{
+    padding: 17px;
+}
+h4{
+    color: red;
+}
+.experience-type::after{
+    content:"@";
+    color:red;
+    font-weight: 100;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+.experience-location{
+    color:gray;
+    padding:  0px 20px;
+}
+.experience-institution{
+    font-weight: 100;
+}
+ .experience-date{
+     color: gray;
+ }
+ .experience-date-separator{
+     color:red;
+ }
+ .experience-location::before{
+     content: "In";
+ }
+ 
+ 
+  .skills {
+    padding: 16.5px 0px 20px 0px;
+  }
+  
+  .skill {
+    background-color: #cccccc;
+    border: 2px solid white;
+    position: relative;
+  }
+  
+  .skill span {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    bottom: 0;
+    color: #FFF;
+  }
+  
+  .skill[data-skill='9']::before {
+    content: '';
+    height: 20px;
+    background-color: #ff0000;
+    display: inline-block;
+    margin: 3px 3px 0px 3px;
+    width: 90%; 
+  }
+  
+  .skill[data-skill='7']::before {
+    content: '';
+    display: inline-block;
+    height: 20px;
+    background-color: #ff0000;
+    
+    margin: 3px 3px 0px 3px;
+    width: 70%; 
+  }
+  
+  .skill[data-skill='5']::before {
+    content: '';
+    height: 20px;
+    background-color: #ff0000;
+    display: inline-block;
+    margin: 3px 3px 0px 3px;
+    width: 50%; 
+  }
+  
+  .skill[data-skill='3']::before {
+    content: '';
+    height: 20px;
+    background-color:red;
+    display: inline-block;
+    margin: 3px 3px 0px 3px;
+    width: 30%; 
+  }
+  
+  .skill[data-skill='1']::before {
+    content: '';
+    height: 20px;
+    background-color: red;
+    display: inline-block;
+    margin: 3px 3px 0px 3px;
+    width: 10%; 
+  }
