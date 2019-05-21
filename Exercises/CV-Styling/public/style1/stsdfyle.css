@@ -1,0 +1,351 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: lato, Arial, sans-serif;
+}
+  
+#\#wrapper {
+  position: relative;
+  width: 90vmax;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #999999;
+  margin: 20px 0 60px 0;
+  padding: 20px 0 10px 0;
+}
+
+hgroup {
+  float: left;
+  margin: 0 30px 0 200px;
+}
+
+hgroup h1,
+hgroup h2 {
+  color: red;
+}
+
+/*** Contact **************************************/
+#contact {
+  position: absolute;
+  top: 4px;
+  right: 0;
+
+}
+
+#contact h3 {
+  
+  visibility:hidden;
+}
+.contacts {
+  width: 600px;
+  background-color:black;
+}
+.contact {
+  display: flex;
+}
+
+.contact-type {
+  width: 130px;
+  padding: 2px 2px;
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.contact-value {
+  padding: 2px 8px;
+  background-color: #000;
+  color: #ff0000;
+}
+
+.contact-value a {
+  color: #ff0000;
+}
+/**************************************************/
+
+/*** Content **************************************/
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 60px 0 130px;
+  margin-bottom: 100px;
+}
+
+#about,
+#competencies,
+#experiences,
+#education,
+#hobbies {
+  flex-basis: 50%;
+  margin-bottom: 15px;
+}
+/************************************************/
+
+/*** About **************************************/
+#about::before {
+  position: absolute;
+  content: '\2022';
+  color: #ff0000;
+  font-size: 45px;
+  top: -20px;
+}
+
+#about {
+  position: relative;
+}
+
+#about h3 {
+  padding: 0 0 10px 30px;
+}
+
+#about p {
+  padding: 16px 20px 20px 0;
+  border-top: 1px solid #dbdbdb;
+  flex-basis: 100%;
+}
+/*****************************************************/
+
+/*** Competencies **************************************/
+#competencies::before {
+  position: absolute;
+  content: '\2022';
+  color: #ff0000;
+  font-size: 45px;
+  top: -20px;
+}
+
+#competencies {
+  position: relative;
+}
+
+#competencies h3 {
+  padding: 0 0 10px 30px;
+}
+
+/**** SKILLS ****/
+.skills-primary::before {
+  content: 'Main';
+}
+
+.skills-secondary::before {
+  content: 'Other';
+}
+
+.skills:first-of-type {
+  border-top: 1px solid #dbdbdb;
+}
+
+.skills {
+  padding: 16px 0px 20px 0px;
+}
+
+.skill {
+  background-color: #cccccc;
+  border: 2px solid #fff;
+  position: relative;
+}
+
+.skill span {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  bottom: 0;
+  color: #FFF;
+}
+
+.skill[data-skill='9']::before {
+  content: '';
+  height: 20px;
+  background-color: #ff0000;
+  display: inline-block;
+  margin: 3px 3px 0px 3px;
+  width: 90%; 
+}
+
+.skill[data-skill='7']::before {
+  content: '';
+  height: 20px;
+  background-color: #ff0000;
+  display: inline-block;
+  margin: 3px 3px 0px 3px;
+  width: 70%; 
+}
+
+.skill[data-skill='5']::before {
+  content: '';
+  height: 20px;
+  background-color: #ff0000;
+  display: inline-block;
+  margin: 3px 3px 0px 3px;
+  width: 50%; 
+}
+
+.skill[data-skill='3']::before {
+  content: '';
+  height: 20px;
+  background-color: #ff0000;
+  display: inline-block;
+  margin: 3px 3px 0px 3px;
+  width: 30%; 
+}
+
+.skill[data-skill='1']::before {
+  content: '';
+  height: 20px;
+  background-color: #ff0000;
+  display: inline-block;
+  margin: 3px 3px 0px 3px;
+  width: 10%; 
+}
+/*****************************************************/
+
+/*** Experiences *************************************/
+#experiences::before {
+  position: absolute;
+  content: '\2022';
+  color: #ff0000;
+  font-size: 45px;
+  top: -20px;
+}
+
+#experiences {
+  position: relative;
+}
+
+#experiences h3 {
+  padding: 0 0 10px 30px;
+}
+
+.experience {
+  flex-basis: 100%;
+}
+
+.experience:first-of-type {
+  border-top: 1px solid #dbdbdb;
+}
+
+.experience h4 {
+  padding-top: 20px;
+}
+
+.experience-type {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+  /* padding: 20px 0px 2px 0px; */
+}
+
+.experience-type::after {
+  content: '@';
+  color: red;
+  font-weight: 100;
+  margin-left: 5px;
+}
+
+.experience-institution {
+  color: red;
+  font-weight: 100;
+}
+
+
+.experience-details {
+  margin-top: 1px;
+  margin-left: 15px;
+  color: #a4a4ac;
+}
+
+.experience-date-separator {
+  color: red;
+}
+
+.experience p {
+  padding: 16px 20px 20px 0;
+}
+
+/*****************************************************/
+
+/*** Education **************************************/
+#education::before {
+  position: absolute;
+  content: '\2022';
+  color: #ff0000;
+  font-size: 45px;
+  top: -20px;
+}
+
+#education {
+  position: relative;
+}
+
+#education h3 {
+  padding: 0 0 10px 30px;
+}
+
+/*****************************************************/
+
+/*** Hobbies *****************************************/
+#hobbies::before {
+  position: absolute;
+  content: '\2022';
+  color: #ff0000;
+  font-size: 45px;
+  top: -20px;
+}
+
+#hobbies {
+  position: relative;
+}
+
+#hobbies h3 {
+  padding: 0 0 10px 30px;
+}
+
+#hobbies ul {
+  border-top: 1px solid #dbdbdb;
+  padding-top: 20px;
+}
+
+#hobbies ul li {
+  margin-left: 42px;
+}
+/*****************************************************/
+
+/*** Media Queries **********************************/
+@media (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+  }
+
+  #about,
+  #competencies,
+  #experiences,
+  #education,
+  #hobbies {
+    flex-basis: 100%;
+  }
+
+  header {
+    padding: 10px 0 10px 0;
+  }
+
+  hgroup {
+    width: 80%;
+    margin:20px;
+  }
+
+  figure img {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  #contact {
+    visibility: hidden;
+  }
+}
