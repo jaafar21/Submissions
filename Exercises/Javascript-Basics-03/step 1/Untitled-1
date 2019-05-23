@@ -1,6 +1,9 @@
+var image = document.querySelector("#image1");
 
-var inputBox = document.getElementById('name');
-
-inputBox.onkeyup = function() {
-  document.getElementById('text').innerHTML = inputBox.value;
-};
+image.addEventListener("mouseover", function() {
+  image.style.border = "3px solid #FF0000";
+})
+  
+image.addEventListener("mouseout", function() {
+  image.style.border = "0px solid #FF0000";
+})
