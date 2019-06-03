@@ -43,3 +43,67 @@ Basic Queries 7:
 Execution finished without errors.
 Result: query executed successfully. Took 0ms, 1 rows affected
 At line 1:
+
+
+
+
+...........GREATING TABLE........:
+1:
+INSERT into graduates (id,name,age,gender,Points)
+    SELECT * from students
+WHERE id=4
+
+2:
+Execution finished without errors.
+Result: query executed successfully. Took 0ms, 1 rows affected
+At line 1:
+UPDATE graduates
+    set graduation = 08/09/2018 
+WHERE id=4
+3:
+Execution finished without errors.
+Result: query executed successfully. Took 0ms, 1 rows affected
+At line 1:
+delete from students WHERE id=4
+
+
+
+
+.......JOIN........:
+1:
+Marc	Google	1998
+Maria	Google	1998
+Alaa	Facebook	2004
+Hala	Snapchat	2011
+
+Execution finished without errors.
+Result: 4 rows returned in 30ms
+At line 1:
+SELECT employees.name, employees.company, companies.date
+    from employees inner JOIN companies
+on employees.Company=companies.name
+
+
+2:
+
+Marc	Google	1998
+Maria	Google	1998
+
+Execution finished without errors.
+Result: 2 rows returned in 5ms
+At line 1:
+SELECT employees.name, employees.company, companies.date
+    from employees inner JOIN companies
+    on employees.Company=companies.name
+where companies.Date<2000
+
+
+3:
+4	Hala	Graphic Designer	Snapchat
+
+Execution finished without errors.
+Result: 1 rows returned in 23ms
+At line 1:
+select * from employees
+WHERE Role='Graphic Designer'
+
