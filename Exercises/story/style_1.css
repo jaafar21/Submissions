@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#\#wrapper {
+    background-color: #999999;
+    width: 1250px;
+    height:170px;
+    margin: 0  auto;
+    position: relative;
+}
+
+
+h1{
+    color: red;
+    padding-top: 50px;
+    padding-left: 120px;
+}
+
+h2{
+    color: red;
+    padding-top: 10px;
+    padding-left: 130px;
+}
+#contact h3::before{
+    content:'';
+}
+
+h3:before{
+    content: ".";
+    color:red;
+    font-size:110px;
+}
+ figure img{
+    position:absolute;
+    top: 30px;
+    right: 700px;
+}
+
+#contact{
+    position: absolute;
+    top: -70px;
+    right: 0px;
+    }
+.contacts{
+    width: 500px;
+    background-color: black;
+    color:red;
+}
+.contact{
+    display: flex;
+}
+
+.contact-type{
+    width:150px;
+    background-color: red;
+    color:white;
+}
+.content{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: br br;
+    grid-template-rows: br br br;
+    grid-template-areas:
+    "about competencies"
+    "experiences education"
+    "hobbies hobbies"
+
+}
+#about{
+    grid-area: about;
+   
+}
+#competencies{
+    padding-top: 10px;
+    padding-left: 130px;
+    grid-area:    
+    }   
+
+#experiences{
+    grid-area: experiences;
+}
+#education{
+    grid-area: education;
+}
+#hobbies{
+    grid-area: hobbies;
+    width: 50%;
+}
+
+p{
+    padding:10px;
+}
+ h3{
+    border-bottom: 1px solid grey;
+}
+
+.experience-type{
+    color:red;
+}
+
+.experience-type::after{
+    content: "@";
+    color:red;
+}
+
+.experience-institution{
+    color:red;
+}
+
+.experience-location{
+    color:#9999b3
+}
+
+.experience-date{
+    color:#9999b3
+}
+
+.experience-date-separator{
+    color:red;
+}
+
+.skills-primary::before {
+    content: "Main";
+}
+
+.skills-secondary::before {
+    content: "Other";
+}
+
+skills{
+    padding: 16px 0 20px 0;
+}
+.skill{
+    position: relative;
+    background-color: grey;
+    border: 3px solid white;
+}
+.skill span{
+    color:white;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+.skill[data-skill="1"]::before{
+    content: '';
+    background-color: red;
+    display: inline-block;
+    height: 20px;
+    width: 10%;
+    margin: 3px 0 3px 3px;
+}
+.skill[data-skill="3"]::before{
+    content: '';
+    background-color: red;
+    display: inline-block;
+    height: 20px;
+    width: 30%;
+    margin: 3px 0 3px 3px;
+}
+.skill[data-skill="5"]::before{
+    content: '';
+    background-color: red;
+    display: inline-block;
+    height: 20px;
+    width: 50%;
+    margin: 3px 0 3px 3px;
+}
+.skill[data-skill="7"]::before{
+    content: '';
+    background-color: red;
+    display: inline-block;
+    height: 20px;
+    width: 70%;
+    margin: 3px 0 3px 3px;
+}
+.skill[data-skill="9"]::before{
+    content: '';
+    background-color: red;
+    display: inline-block;
+    height: 20px;
+    width: 90%;
+    margin: 3px 0 3px 3px;
+}
+
+@media (max-width:600px) {
+    #\#wrapper {
+        background-color: #999999;
+        width: 500px;
+        height:250px;
+        margin: 0  auto;
+        position: relative;
+    }
+
+    hgroup{
+        position: absolute;
+        top: -30px;
+
+    }
+
+    figure img{
+        position:absolute;
+        top: 120px;
+        right: 220px;
+    }
+
+    h1{
+        color: red;
+        padding-top: 50px;
+        padding-left: 120px;
+    }
+
+    h2{
+        color: red;
+        padding-top: 10px;
+        padding-left: 130px;
+    }
+
+    h3:before{
+        content: ".";
+        color:red;
+        font-size:110px;
+    }
+    
+    
+
+    .content{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: br;
+        grid-template-rows: br br br br br;
+        grid-template-areas:
+        "about"
+        "competencies"
+        "experiences"
+        "education"
+        "hobbies"
+    
+    }
+
+    #contact{
+        position: absolute;
+        top: 1950px;
+        right: 0px;
+        }
+    .contacts{
+        width: 500px;
+        background-color: black;
+        color:red;
+    }
+    .contact{
+        display: flex;
+    }
+    
+    .contact-type{
+        width:150px;
+        background-color: red;
+        color:white;
+    }
+
+    #about{
+        grid-area: about;
+        padding-top: 180px;
+       
+    }
+    #competencies{
+        grid-area: competencies;h2{
+            color: red;
+            padding-top: 10px;
+            padding-left: 130px;
+        }
+    }
+    #experiences{
+        grid-area: experiences;
+    }
+    #education{
+        grid-area: education;
+    }
+    #hobbies{
+        grid-area: hobbies;
+        width: 50%;
+    }
+}
