@@ -1,0 +1,45 @@
+Basic Queries 1:
+
+Alex
+Basma
+Hasan
+Jana
+Layal
+Robert
+
+Execution finished without errors.
+Result: 6 rows returned in 13ms
+At line 1:
+
+Basic Queries 2:
+5	Robert	34	M	500
+6	Jana	33	F	500
+
+Execution finished without errors.
+Result: 2 rows returned in 16ms
+At line 1:
+
+Basic Queries 3:
+Execution finished without errors.
+Result: 0 rows returned in 4ms
+At line 1:
+
+Basic Queries 4:
+200
+Execution finished without errors.
+Result: 1 rows returned in 15ms
+At line 1:
+Basic Queries 5:
+jaafar	29	M	19999999
+ 
+
+Basic  Queries 6
+
+Execution finished without errors.
+Result: query executed successfully. Took 0ms, 1 rows affected
+At line 1:
+
+Basic Queries 7:
+Execution finished without errors.
+Result: query executed successfully. Took 0ms, 1 rows affected
+At line 1:
