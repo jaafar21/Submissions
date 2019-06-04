@@ -107,3 +107,62 @@ At line 1:
 select * from employees
 WHERE Role='Graphic Designer'
 
+
+
+
+
+............count and filter.............
+
+1:
+count and filter
+
+Execution finished without errors.
+Result: 1 rows returned in 27ms
+At line 1:
+select name,points from students 
+where Points=(select max(points) from students)
+
+
+
+
+2:
+3333608.16666667
+Execution finished without errors.
+Result: 1 rows returned in 21ms
+At line 1:
+select avg(points)as Average
+from students
+
+3:
+2
+Execution finished without errors.
+Result: 1 rows returned in 5ms
+At line 1:
+select count(Points)as numberofstudents from students
+where points=500
+
+
+4:
+Basma
+Hasan
+
+Execution finished without errors.
+Result: 2 rows returned in 12ms
+At line 1:
+select name as namescontains_s from students
+where name like '%s%'
+
+
+5:
+jaafar	19999999
+Robert	500
+Jana	500
+Basma	350
+Alex	150
+Hasan	150
+
+Execution finished without errors.
+Result: 6 rows returned in 8ms
+At line 1:
+select name,points as decreasing_order_pts from students
+ORDER by points DESC
