@@ -24,7 +24,7 @@ function startApp(name){
  * 
  * For example, if the user entered 
  * ```
- * node tasks}.js batata
+ * node tasks.js batata
  * ```
  * 
  * The text received would be "batata"
@@ -33,29 +33,33 @@ function startApp(name){
  * @param  {string} text data typed by the user
  * @returns {void}
  */
+var myArray = ['learn coding', 'code and code', 'much coding'];
+
 function onDataReceived(text) {
   if (text === 'exit\n') {
     quit();
   }
- 
   if (text === 'quit\n') {
     quit();
   }
   else if(text.trim().substring(0, 5) === 'hello'){
     hello(text);
   }
-  
-  if (text === 'list\n') {
-    list();
-  }
-  else if
-  (text.trim().substring(0, 4) === 'help'){
+  else if(text.trim().substring(0, 4) === 'help'){
     help(text);
+  }
+  else if (text.trim().substring(0, 3) === 'add') {
+    add(text);
+  }
+  else if (text === 'remove\n') {
+    remove();
+  }
+  else if (text === 'list\n') {
+    list();
   }
   else{
     unknownCommand(text);
   }
-
 }
 
 
@@ -71,28 +75,51 @@ function unknownCommand(c){
 }
 
 
+
 /**
  * Says hello
- *
+ *console.log at the top of the function and then test writing things in the running software to see how that works
  * @returns {void}
  */
 function hello(c){
   console.log(c.trim() + '!')
 }
+
 /**
- * open help
+ * Open Help page
  *
- */ 
-function help(a){
- var z='if you want to leave press quit or exite\n if you want to say hello type hello\n if you want help type help'
- console.log(a.trim() + '!\n' + z)
+ * @returns {void}
+ */
+function help(t){
+  var x = 
+  "if you want to quit press exit or quit \nif you want to say hello just say it\nif you need help just ask for it\ntype list to check your schedule\ntype add to add items in your schedule\nyoucan remove items from your schedule by typing remove"
+  console.log(t.trim() + '!\n'+x)
 }
 
+/**
+ * add 
+ *
+ * @returns {void}
+ */
+function add(t){
+  myArray.push(t.trim().substring(3,t.trim().length))
+}
+
+/**
+ * remove 
+ *
+ * @returns {void}
+ */
+
+/**
+ * list 
+ *
+ * @returns {void}
+ */
 function list(){
-  var myArray = ["coding", "learning code", "code and code"]
-  for (var i=0 ;i<myArray.length;i++){
-    console.log((i+1)*1+'-'+myArray[i])
-  }
+  for (var i = 0; i < myArray.length; i++) {
+    console.log((i+1)*1+'-'+myArray[i]);
+}
 }
 
 /**
