@@ -18,7 +18,7 @@ function startApp(name){
 }
 
 function help(){
-  console.log('help!')
+  console.log('if you want to leave press quit or exite\n if you want to say hello type hello\n if you want help type help')
 }
 /**
  * Decides what to do depending on the data that was received
