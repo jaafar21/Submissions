@@ -24,7 +24,7 @@ function startApp(name){
  * 
  * For example, if the user entered 
  * ```
- * node tasks.js batata
+ * node tasks}.js batata
  * ```
  * 
  * The text received would be "batata"
@@ -37,11 +37,16 @@ function onDataReceived(text) {
   if (text === 'exit\n') {
     quit();
   }
+ 
   if (text === 'quit\n') {
     quit();
   }
   else if(text.trim().substring(0, 5) === 'hello'){
     hello(text);
+  }
+  
+  if (text === 'list\n') {
+    list();
   }
   else if
   (text.trim().substring(0, 4) === 'help'){
@@ -50,6 +55,7 @@ function onDataReceived(text) {
   else{
     unknownCommand(text);
   }
+
 }
 
 
@@ -82,6 +88,12 @@ function help(a){
  console.log(a.trim() + '!\n' + z)
 }
 
+function list(){
+  var myArray = ["coding", "learning code", "code and code"]
+  for (var i=0 ;i<myArray.length;i++){
+    console.log((i+1)*1+'-'+myArray[i])
+  }
+}
 
 /**
  * Exits the application
