@@ -40,8 +40,8 @@ function onDataReceived(text) {
   if (text === 'quit\n') {
     quit();
   }
-  else if(text === 'hello\n'){
-    hello();
+  else if(text.trim().substring(0, 5) === 'hello'){
+    hello(text);
   }
   else if
   (text === 'help\n'){
@@ -63,19 +63,20 @@ function onDataReceived(text) {
 function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
 }
-
+'hello!'
 
 /**
  * Says hello
  *
  * @returns {void}
  */
-function hello(){
-  console.log('hello!')
+function hello(c){
+  console.log(c.trim() + '!')
 }
 /**
- * open help list
+ * open help
  *
+ */ 
 function help(){
   console.log('if you want to leave press quit or exite\n if you want to say hello type hello\n if you want help type help')
 }
