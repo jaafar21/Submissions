@@ -54,6 +54,12 @@ function onDataReceived(text) {
   else if (text === 'remove\n') {
     remove();
   }
+  else if (text === 'remove 1\n') {
+    remove1();
+  }
+  else if (text === 'remove 2\n') {
+    remove2();
+  }
   else if (text === 'list\n') {
     list();
   }
@@ -92,7 +98,7 @@ function hello(c){
  */
 function help(t){
   var x = 
-  "if you want to quit press exit or quit \nif you want to say hello just say it\nif you need help just ask for it\ntype list to check your schedule\ntype add to add items in your schedule\nyoucan remove items from your schedule by typing remove"
+  "if you want to quit press exit or quit \n if you want to add something on list type add and type it \n to remove the last element type remove\n to remove the first element type remove 1\nif you want to remove the second element type remove2 \nif you want to say hello just say it"
   console.log(t.trim() + '!\n'+x)
 }
 
@@ -110,6 +116,16 @@ function add(t){
  *
  * @returns {void}
  */
+function remove(){
+  myArray.pop()
+}
+function remove1(){
+  myArray.shift()
+}
+function remove2() { 
+    myArray.splice(1, 1)
+  }
+
 
 /**
  * list 
