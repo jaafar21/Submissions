@@ -17,9 +17,7 @@ function startApp(name){
   console.log("--------------------")
 }
 
-function help(){
-  console.log('if you want to leave press quit or exite\n if you want to say hello type hello\n if you want help type help')
-}
+
 /**
  * Decides what to do depending on the data that was received
  * This function receives the input sent by the user.
@@ -74,6 +72,12 @@ function unknownCommand(c){
  */
 function hello(){
   console.log('hello!')
+}
+/**
+ * open help list
+ *
+function help(){
+  console.log('if you want to leave press quit or exite\n if you want to say hello type hello\n if you want help type help')
 }
 
 
