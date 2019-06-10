@@ -44,8 +44,8 @@ function onDataReceived(text) {
     hello(text);
   }
   else if
-  (text === 'help\n'){
-    help();
+  (text.trim().substring(0, 4) === 'help'){
+    help(text);
   }
   else{
     unknownCommand(text);
@@ -63,7 +63,7 @@ function onDataReceived(text) {
 function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
 }
-'hello!'
+
 
 /**
  * Says hello
@@ -77,8 +77,9 @@ function hello(c){
  * open help
  *
  */ 
-function help(){
-  console.log('if you want to leave press quit or exite\n if you want to say hello type hello\n if you want help type help')
+function help(a){
+ var z='if you want to leave press quit or exite\n if you want to say hello type hello\n if you want help type help'
+ console.log(a.trim() + '!\n' + z)
 }
 
 
