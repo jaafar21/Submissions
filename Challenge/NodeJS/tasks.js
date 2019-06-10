@@ -17,7 +17,9 @@ function startApp(name){
   console.log("--------------------")
 }
 
-
+function help(){
+  console.log('help!')
+}
 /**
  * Decides what to do depending on the data that was received
  * This function receives the input sent by the user.
@@ -37,8 +39,15 @@ function onDataReceived(text) {
   if (text === 'exit\n') {
     quit();
   }
+  if (text === 'quit\n') {
+    quit();
+  }
   else if(text === 'hello\n'){
     hello();
+  }
+  else if
+  (text === 'help\n'){
+    help();
   }
   else{
     unknownCommand(text);
