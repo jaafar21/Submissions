@@ -10,7 +10,9 @@
     { title: 'Brazil', year: 1985, rating: 8 },
     { title: 'الإرهاب والكباب‎', year: 1992, rating: 6.2 }
 ]
-//////*step3*/
+
+        //////*step3*/
+
   app.get('/', (req, res) => { 
       res.send('<h1>Ok</h1>'); }); 
 
@@ -20,16 +22,23 @@
   app.get('/time', (req, res) => { 
     var time = new Date (); 
     res.send({status:200, message: time.getHours() + ":"+ time.getMinutes() + ":" + time.getSeconds()}); });
-   /*STEP 4*////////////
-  app.get('/hello/:id?', (req, res) =>{ 
+
+
+        /*STEP 4*////////////
+
+     app.get('/hello/:id?', (req, res) =>{ 
     if(req.params.id !== undefined){ res.send ({ status:200, message:"Hello," + req.params.id })} 
     else { res.send ({ status:200, message:"Hello," })} });
- app.get('/search', (req, res) =>{ 
+
+    app.get('/search', (req, res) =>{ 
     if(req.query.s !== undefined && req.query.s !== ""){
     res.send({status:200, message:"ok", data:req.query.s})
       } else {
      res.send({status:500, error:true, message:"you have to provide a search"}) } } );
+
+
             //////////*step 5*/
+
             app.get('/movies/read', (req, res) => {
                 res.send({status:200, message:"movies"}); });
        
@@ -39,3 +48,4 @@
                         res.send({status:200, message:""}); });
                         app.get('/movies/create', (req, res) => {
                             res.send({status:200, message:""}); });
+                            
