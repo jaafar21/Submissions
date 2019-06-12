@@ -44,8 +44,36 @@
        
                 app.get('/movies/edit', (req, res) => {
                     res.send({status:200, message:""}); });
+
                     app.get('/movies/delete', (req, res) => {
                         res.send({status:200, message:""}); });
+
                         app.get('/movies/create', (req, res) => {
                             res.send({status:200, message:""}); });
+                             
+
+
+                            /////////*steep 6*/
                             
+                     app.get('/movies/read/by-date',(req,res)=> { 
+                     res.send({status:200, data:movies.sort(function(a, b)
+                    { return a.year - b.year }) 
+                     })
+                     })
+
+                     app.get('/movies/read/by-rating',(req,res)=> { 
+                    res.send({status:200, data:movies.sort(function(a, b)
+                    { return b.rating - a.rating }) 
+                     })
+                     })
+
+
+                     app.get('/movies/read/by-title',(req,res)=> { 
+                        res.send({status:200, data:
+                        movies.sort(function(a,b) {
+                        var x = a.title.toLowerCase();
+                        var y = b.title.toLowerCase();
+                        return x < y ? -1 : x > y ? 1 : 0;
+                            })
+                           })
+                            })
