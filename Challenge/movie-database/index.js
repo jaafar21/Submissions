@@ -37,24 +37,24 @@
      res.send({status:500, error:true, message:"you have to provide a search"}) } } );
 
 
-            //////////*step 5*/
+                 //////////*step 5*/
 
-            app.get('/movies/read', (req, res) => {
-                res.send({status:200, message:"movies"}); });
+                  app.get('/movies/read', (req, res) => {
+                     res.send({status:200, message:"movies"}); });
        
-                app.get('/movies/edit', (req, res) => {
-                    res.send({status:200, message:""}); });
+                      app.get('/movies/edit', (req, res) => {
+                      res.send({status:200, message:""}); });
 
                     app.get('/movies/delete', (req, res) => {
                         res.send({status:200, message:""}); });
 
-                        app.get('/movies/create', (req, res) => {
+                     app.get('/movies/create', (req, res) => {
                             res.send({status:200, message:""}); });
                              
 
 
-                            /////////*steep 6*/
-                            
+                            /////////*step 6*/
+
                      app.get('/movies/read/by-date',(req,res)=> { 
                      res.send({status:200, data:movies.sort(function(a, b)
                     { return a.year - b.year }) 
@@ -77,3 +77,20 @@
                             })
                            })
                             })
+
+                 /****step 7 */
+
+             app.get('/movies/read/:id', (req, res) =>{ 
+                 const ID = req.params.id;
+                 if (ID>0&& ID<movies.length){ res.send({
+                    status:300,
+                    data:movies[ID-1]
+                })}
+                else{
+                    res.send(
+                        {status:404, error:true, message:'the movie <ID> does not exist'}
+                    )
+                }
+           
+                });
+                
