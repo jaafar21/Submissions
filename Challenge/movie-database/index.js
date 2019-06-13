@@ -103,9 +103,9 @@
 
 
 
-                                   app.get('/movies/create', (req,res)=>{ 
+                                          app.get('/movies/create', (req,res)=>{ 
 
-                                         if(req.query.title !==undefined && parseInt(req.query.year) !== undefined && parseInt(req.query.rating)!==undefined){
+                                           if(req.query.title !==undefined && parseInt(req.query.year) !== undefined && parseInt(req.query.rating)!==undefined){
 
                                            movies.push({title:req.query.title,year:parseInt(req.query.year),rating:parseInt(req.query.rating)})
                                            res.send({status : 200,data :movies})
@@ -128,3 +128,25 @@
                                            res.send({status:404, error:true, message:'the movie' +ID +'does not exist'})
                                        }
                                      })
+
+
+
+
+                                     /******************** step 10 ***************/
+
+                                     app.get('/movies/update/:ID',(req,res) => { 
+                                  
+                                    let nID = req.params.ID 
+                                    let nTitle = req.query.title 
+                                    let nYear = req.query.year 
+                                    let nRating = req.query.rating 
+
+                                    function update(n, b) { 
+                                      if(n !== undefined) { movies[nID-1][b] = n } }
+                                      if(nID > 0 && nID <= movies.length )
+                                       { update(nTitle, 'title') update(nYear, 'year') update(nRating, 'rating')
+                                        res.send({status:200, data: movies}) } else { 
+                                      res.send({status:404, error:true, message:'the movie ID' +'does not exist'}) 
+                                    } 
+                                    )}
+                                  
