@@ -29,7 +29,7 @@
 
                      app.get('/hello/:id?', (req, res) =>{ 
                       if(req.params.id !== undefined){ res.send ({ status:200, message:"Hello," + req.params.id })} 
-                      else { res.send ({ status:200, message:"Hello," })} });
+                      else { res.send ({ status:200, message:"Hello ," })} });
 
                      app.get('/search', (req, res) =>{ 
                      if(req.query.s !== undefined && req.query.s !== ""){
@@ -41,16 +41,16 @@
                      //////////*step 5*/
 
                       app.get('/movies/read', (req, res) => {
-                      res.send({status:200, message:"movies"}); });
+                      res.send({status:200, data: movies}); });
        
-                      app.get('/movies/edit', (req, res) => {
-                      res.send({status:200, message:""}); });
+                      /* app.get('/movies/edit', (req, res) => {
+                      res.send({status:200, message:""}); }); */
 
-                      app.get('/movies/delete', (req, res) => {
+                     /*  app.get('/movies/delete', (req, res) => {
                       res.send({status:200, message:""}); });
-
-                      app.get('/movies/create', (req, res) => {
-                      res.send({status:200, message:""}); });
+ */
+                     /*  app.get('/movies/create', (req, res) => {
+                      res.send({status:200, message:""}); }); */
                              
 
 
@@ -99,19 +99,32 @@
 
                       /*******step 8 *********************/
                   
-                               movies.push([{ title: 'The wolf of wall street', year: 2005, rating: 9 }])
+                               //movies.push([{ title: 'The wolf of wall street', year: 2005, rating: 9 }])
 
 
 
-                                   app.get('/movies/creat', (req,res)=>{ 
+                                   app.get('/movies/create', (req,res)=>{ 
 
                                          if(req.query.title !==undefined && parseInt(req.query.year) !== undefined && parseInt(req.query.rating)!==undefined){
 
                                            movies.push({title:req.query.title,year:parseInt(req.query.year),rating:parseInt(req.query.rating)})
                                            res.send({status : 200,data :movies})
 
-                                           if(req.query.rating === ""){ req.query.rating = 4}
-                                             }else{ 
+                                              if(req.query.rating === ""){ req.query.rating = 4}
+                                              }else{ 
                                               res.send({status:403, error:true, message:'you cannot create a movie without providing a title and a year'}) 
                                                     } 
                                       })
+
+                                      /***********************************step 9 */
+                                         app.get('/movies/delete/:id' , (req, res)=>{
+                                         var ID = req.params.id
+                                         if (ID>0 && ID <= movies.length){
+                                         movies.splice(ID-1 ,1)
+                                         res.send({status: 200 ,data:movies })
+
+                                         }
+                                          else {
+                                           res.send({status:404, error:true, message:'the movie' +ID +'does not exist'})
+                                       }
+                                     })
